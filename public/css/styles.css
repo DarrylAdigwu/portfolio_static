@@ -1,0 +1,295 @@
+html {
+  font-size: 16px;
+  font-family: Verdana;
+}
+
+body {
+  background-color: #f2f0e6;
+  position: relative;
+}
+
+#content-wrap {
+  padding-bottom: 6rem;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-wrap {
+  overflow: hidden;
+}
+
+/* Navigation bar, logo, banner */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 8rem;
+  background-color: rgba(242,240,230, 0);
+  border-bottom: 1px solid #966c48;
+  font-family: Copperplate;
+}
+
+.logo {
+  margin-left: 4rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #f2f0e6;
+}
+
+.logo:hover {
+  color: #966c48;
+}
+
+#navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin: 0 2rem 0 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #f2f0e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+
+.nav a:hover {
+  color: #966c48;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #f2f0e6;
+  border-right: 1px solid #f2f0e6;
+  text-align: center;
+}
+
+.burger {
+  display: none;
+}
+
+.off-screen {
+  display: none;
+}
+
+main {
+  padding: 8rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+.logo {
+  margin-left: 2rem;
+}
+
+.logo.active {
+  visibility: hidden;
+}
+
+#navigation {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 2.5rem;
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+
+nav .line {
+  display: block;
+  height: .45rem;
+  width: 100%;
+  background-color: #966c48;
+  border-radius: .5rem;
+
+}
+
+.off-screen {
+  display: block;
+  height: 0;
+  width: 70%;
+  background-color: #966c48;
+  position: absolute;
+  top: 0;
+  transition: height .5s ease-in-out;
+}
+
+.off-screen.active {
+  height: 8rem;
+}
+
+@keyframes hide {
+  0% {opacity: 0;}
+  25% {opacity: .25;}
+  50% {opacity: .5;}
+  100% {opacity: 1;}
+}
+
+.off-nav {
+  display: none;
+  opacity: 0;
+}
+
+
+.off-nav.active {
+  display: block;
+  opacity: 1;
+  animation: hide 1s ease-out .5s backwards;
+}
+
+.off-nav .nav {
+  height: 2rem;
+  font-size: .75rem;
+  width: 100%;
+}
+
+
+
+.nav a:hover {
+  border: none;
+  color: #2d2e30;
+}
+
+
+}
+
+/* intro text */
+#welcome {
+  position: relative;
+  font-size: 200%;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+}
+
+#page-intro {
+  position: relative;
+  top: 60%;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 2rem;
+}
+
+/* image and overlay banner */
+#banner {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/public/images/birds.jpeg");
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  z-index: -5;
+}
+
+#overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.overlay-text {
+  height: 100%;
+  color: #f2f0e6;
+}
+
+/* main section */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  margin: 0;
+}
+
+#all-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.card {
+  position: relative;
+  width: 25rem;
+}
+
+.card-img-top {
+  height: 100%;
+}
+
+.btn-primary {
+  background-color: #48594a;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #f2f0e6;
+  color: #48594a;
+  border: 1px solid #48594a;
+}
+
+@media only screen and (max-width: 1600px) {
+  #all-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-around;
+      height: auto;
+      width: 100%;
+  }
+
+  .card {
+      position: relative;
+      width: 60%;
+      margin-top: 2rem;
+  }
+
+  .card-img-top {
+      width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  position: absolute;
+  height: 6rem;
+  width: 100%;
+  align-items: center;
+  border-top: 1px solid #966c48;
+  bottom: 0;
+}
+
+#thanks {
+  margin: auto;
+}

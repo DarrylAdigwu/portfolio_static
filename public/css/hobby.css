@@ -1,0 +1,132 @@
+/* Hobbies page */
+.hobby-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#banner {
+  background-image: url("/public/images/mountain.webp");
+}
+
+#overlay {
+  background-color: rgba(60,63,66, .5);
+}
+
+#hobby-intro {
+  position: relative;
+  font-size: 6rem;
+  color: #f2f0e6;
+  top: 6rem;
+}
+
+.hobby-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 90vh;
+}
+
+.hobby-descr {
+  position: absolute;
+  font-size: 5rem;
+  color: #3c3f42;
+  left: -25%;
+  top: 0%;
+  z-index: 8;
+}
+
+.hobby-descr ul {
+  list-style: none;
+}
+.carousel {
+  height: 70%;
+  width: 70%;
+}
+
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+  border-radius: .325rem;
+}
+
+main {
+  padding: 8rem 0;
+}
+
+@media only screen and (max-width: 1400px) {
+  .hobby-descr {
+      font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hobby-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: space-around;
+      width: 90%;
+      height: 100%;
+  }
+
+  #hobby-intro {
+      font-size: 4rem;
+  }
+
+  .hobby-descr {
+      font-size: 2rem;
+      top: 5%;
+      left: -20%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .hobby-descr {
+      font-size: 1.5rem;
+      top: 10%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  #hobby-intro {
+      font-size: 2rem;
+      top: 2rem;
+  }
+
+  .carousel {
+      height: 70%;
+      width: 100%;
+  }
+
+  .hobby-container {
+      width: 90%;
+      height: 100%;
+  }
+
+  header {
+      position: relative;
+      height: 60vh;
+  }
+
+  .hobby-descr {
+      position: relative;
+      justify-self: start;
+      font-size: 2rem;
+      left: 0;
+      margin-bottom: 1rem;
+      width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .hobby-descr {
+      font-size: 1rem;
+  }
+
+}

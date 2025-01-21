@@ -1,0 +1,153 @@
+header {
+  height: auto;
+}
+
+#nav-about a {
+  color: #2d2e30;
+}
+
+#nav-about a:hover {
+  color: #966c48;
+  border-left: 1px solid #2d2e30;
+  border-right: 1px solid #2d2e30;
+}
+
+#nav-about .logo {
+  color: #2d2e30;
+}
+
+#nav-about .logo:hover {
+  color: #966c48;
+  border: none;
+}
+
+main {
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.about-bg {
+  position: absolute;
+  background-image: url("/public/images/rb.png");
+  height: 100%;
+  width: 100%;
+  opacity: .125;
+  z-index: -2;
+}
+
+.screen {
+  position: absolute;
+  background-color: rgba(60,63,66, .125);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.about-container {
+  display: flex;
+  color: 	#3c3f42;
+  width: 80%;
+  height: 60%;
+  overflow: hidden;
+  border-bottom: 4px solid black;
+}
+
+.about-descr {
+  width: 30%;
+  padding: 1rem;
+  padding-top: 0;
+  border-right: 4px solid black;
+}
+
+.about-descr h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: Copperplate;
+}
+
+.about-descr p {
+  font-size: 1.125rem;
+  font-family: Verdana;
+  line-height: 1.5rem;
+}
+
+.profile {
+  max-width: 30vh;
+}
+
+.profile img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1120px), (max-height: 780px) {
+
+  .about-descr {
+      width: 50%;
+  }
+
+  .about-descr h1 {
+      font-size: 2rem;
+  }
+
+  .about-descr p {
+      font-size: .875rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px), (max-height: 680px) {
+  .about-container {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      height: 70%;
+      border: none;
+  }
+
+  .about-descr {
+      width: 70%;
+      border: none;
+  }
+
+  .profile {
+      height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 520px), (max-height: 520px) {
+  main {
+      height: auto;
+  }
+
+  .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      width: 90%;
+      height: auto;
+      overflow: visible;
+  }
+
+  .about-descr {
+      padding: 0;
+      margin: 1rem .5rem 1rem 0;
+      width: 60%;
+  }
+
+  .profile {
+      align-self: end;
+  }
+
+  .profile img {
+      max-width: 100%;
+  }
+}
+
+@media only screen and (max-height: 620px) {
+
+  .profile img {
+      border-left: 2px solid black;
+  }
+}
